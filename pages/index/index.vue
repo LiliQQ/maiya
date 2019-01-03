@@ -1,10 +1,10 @@
 <template>
 	<view>
 		<view class="hear_search">
-			<view class="brand_view">
+			<navigator class="brand_view" open-type="switchTab" url="../brand/brand">
 				<image src='../../static/image/bar02AA.png' class="brand_img"></image>
 				<view class="brand_t">品牌</view>
-			</view>
+			</navigator>
 			<view class="input_view">
 				<view class="input_box">
 					<text class="search-icon">&#xe633;</text>
@@ -48,14 +48,14 @@
 			</view>	
 		</view>
 		<view class="upData">新特卖●每天早10晚8点上新</view>
-		<navigator class="productbox" url="../../product/productInfor/productInfor" hover-class="none">
+		<navigator class="productbox" url="../../product/productlist/productlist" hover-class="none">
 			 <image src='../../static/image/img01.png' class="bannerImg"></image>
 			 <view class="productInfor">
 				 <view class="productTitle">1.5折起 富安娜艺术花卉专场</view>
 				 <view class="leaveTime">剩2天</view>
 			 </view>
 		</navigator>
-		<navigator class="productbox" url="../../product/productInfor/productInfor" hover-class="none">
+		<navigator class="productbox" url="../../product/productlist/productlist" hover-class="none">
 			 <image src='../../static/image/img01.png' class="bannerImg"></image>
 			 <view class="productInfor">
 				 <view class="productTitle">1.5折起 富安娜艺术花卉专场</view>
@@ -110,8 +110,8 @@
 		padding-bottom: 10upx;
 	}
 	.hear_search .brand_img {
-		width: 40upx;
-		height: 40upx;
+		width: 35upx;
+		height: 35upx;
 	}
 	.hear_search .brand_view {
 		-webkit-flex: 1;
