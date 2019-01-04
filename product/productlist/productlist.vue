@@ -30,7 +30,6 @@
 			</view>
 			<view class="shopping">
 				<view class="share_view" @click="showBottomPopup">分享</view>
-				<view class="shopcart">加入购物车</view>
 			</view>
 		</view>
 		<uni-popup :show="showPopupBottom" :type="popType" v-on:hidePopup="hidePopup" :heightBottom="180">
@@ -49,7 +48,7 @@
 					<radio-group @change="radioChange" class="margin_m">
 						<label class="uni-radio" v-for="(item, index) in items" :key="item.value">
 							<view>
-								<radio :value="item.value" :checked="index === current" />
+								<radio :value="item.value" :checked="index === current" :color="checkColor" />
 							</view>
 							<view>{{item.name}}</view>
 						</label>
@@ -89,7 +88,8 @@
 						checked: 'true'
 					}
 				],
-				current: 0
+				current: 0,
+				checkColor:'#ff5733'
 			};
 		},
 		methods: {
@@ -154,11 +154,11 @@
 	}
 
 	.product_panel {
-		width: 95%;
+		width: 88%;
 		margin: 20upx auto;
 		background: #fff;
 		border-radius: 16upx;
-		padding: 0 2%
+		padding: 0 3%
 	}
 
 	.product_panel .title {
@@ -172,14 +172,14 @@
 	}
 
 	.product_panel .item_box .pro_width {
-		width: 400upx;
-		height: 480upx;
+		width: 300upx;
+		height: 300upx;
 	}
 
 	.product_panel .item_box .mai_price {
 		color: rgba(80, 80, 80, 1);
 		font-size: 28upx;
-		padding-left: 6upx;
+		padding-left: 20upx;
 	}
 
 	.product_panel .item_box .jianyi_price {
@@ -191,13 +191,13 @@
 		font-size: 24upx;
 		line-height: 44upx;
 		text-align: center;
-		margin: 15upx 0 15upx 6upx;
+		margin: 15upx 0 15upx 20upx;
 	}
 
 	.product_panel .item_box .describe {
 		color: rgba(128, 128, 128, 1);
 		font-size: 24upx;
-		padding-left: 6upx;
+		padding-left: 20upx;
 	}
 
 	.spec_box {
@@ -231,24 +231,24 @@
 
 	.shopping .share_view {
 		width: 140upx;
-		height: 58upx;
+		height: 48upx;
 		color: rgba(172, 51, 193, 1);
 		border: rgba(172, 51, 193, 1) solid 2upx;
 		border-radius: 32upx;
 		font-size: 24upx;
-		line-height: 58upx;
+		line-height: 48upx;
 		text-align: center;
 		margin-right: 10upx;
 	}
 
 	.shopping .shopcart {
 		width: 220upx;
-		height: 58upx;
+		height: 48upx;
 		color: rgba(255, 255, 255, 1);
 		background-color: rgba(172, 51, 193, 1);
 		border-radius: 32upx;
 		font-size: 24upx;
-		line-height: 58upx;
+		line-height: 48upx;
 		text-align: center;
 		border: rgba(172, 51, 193, 1) solid 2upx;
 	}

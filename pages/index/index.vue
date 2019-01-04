@@ -102,6 +102,9 @@
 	page{
 		background: #f4f3f9;
 	}
+	swiper{
+		height: 320rpx;
+	}
 	.hear_search {
 		display: flex;
 		background: #fff;

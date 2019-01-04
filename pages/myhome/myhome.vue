@@ -12,8 +12,8 @@
 		<view class="my-order">
 			<view class="order-m">
 				<text class="order_title">我的订单</text>
-				<navigator class="more-r" url="">
-					<text class="small-f">查看全部</text>
+				<navigator class="more-r" url="../../homepage/myorder/myorder">
+					<text class="small-f" >查看全部</text>
 					<text class="gopageIcon">&#xe731;</text>
 				</navigator>
 			</view>
@@ -43,7 +43,7 @@
 		<view class="my-order">
 			<view class="order-m">
 				<text class="order_title">我的业绩</text>
-				<navigator class="more-r" url="../../my-Account/pages/myorderlist/myorderlist">
+				<navigator class="more-r" url="../../homepage/myorder/myorder">
 					<text class="small-f">查看全部</text>
 					<text class="gopageIcon">&#xe731;</text>
 				</navigator>
@@ -100,6 +100,14 @@
 			return {
 
 			};
+		},
+		created(){
+			uni.login({
+			  provider: 'weixin',
+			  success: function (loginRes) {
+				console.log(loginRes.authResult);
+			  }
+			})
 		}
 	}
 </script>

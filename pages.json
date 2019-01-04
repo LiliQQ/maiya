@@ -3,14 +3,104 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页",
+				"backgroundColor": "#f0f0f0"
+			}
+		},
+		{
+			"path": "pages/brand/brand",
+			"style": {
+				"navigationBarTitleText": "品牌"
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/myhome/myhome",
+			"style": {
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+	"subPackages": [{
+			"root": "homepage",
+			"pages": [
+				{
+					"path": "myset/myset",
+					"style": {
+						"navigationBarTitleText": "设置"
+					}
+				},
+				{
+					"path": "servicelist/servicelist",
+					"style": {
+						"navigationBarTitleText": "客服中心"
+					}
+				},
+				{
+					"path": "myorder/myorder",
+					"style": {
+						"navigationBarTitleText": "我的订单"
+					}
+				}
+			]
+	      },
+	{
+		"root": "product",
+		"pages": [
+			{
+				"path": "productInfor/productInfor",
+				"style": {
+					"navigationBarTitleText": "产品详情"
+				}
+			},
+			{
+				"path": "productlist/productlist",
+				"style": {
+					"navigationBarTitleText": "产品列表"
+				}
+			}
+		]
 	}
+],
+"globalStyle": {
+	"navigationBarTextStyle": "black",
+	"navigationBarTitleText": "uni-app",
+	"navigationBarBackgroundColor": "#F8F8F8",
+	"backgroundColor": "#f0f0f0"
+},
+"tabBar": {
+	"color": "#7A7E83",
+	"selectedColor": "#383838",
+	"borderStyle": "black",
+	"backgroundColor": "#ffffff",
+	"list": [{
+		"pagePath": "pages/index/index",
+		"iconPath": "static/image/bar01AA.png",
+		"selectedIconPath": "static/image/bar011.png",
+		"text": "首页"
+	}, {
+		"pagePath": "pages/brand/brand",
+		"iconPath": "static/image/bar02AA.png",
+		"selectedIconPath": "static/image/bar0222.png",
+		"text": "品牌"
+	}, {
+		"pagePath": "pages/myhome/myhome",
+		"iconPath": "static/image/bar04A.png",
+		"selectedIconPath": "static/image/bar04.png",
+		"text": "我的"
+	}]
+},
+"condition": { //模式配置，仅开发期间生效
+	"current": 0, //当前激活的模式(list 的索引项)
+	"list": [{
+		"name": "", //模式名称
+		"path": "", //启动页面，必选
+		"query": "" //启动参数，在页面的onLoad函数里面得到
+	}]
+}
 }
